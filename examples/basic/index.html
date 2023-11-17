@@ -35,7 +35,9 @@
 			function() { console.log( 'hi' ) }
 		};
 
-		gui.add( params, 'options', { Small: 1, Medium: 10, Large: 100 } );
+		const options = gui.add( params, 'options', { Small: 1, Medium: 10, Large: 100 } );
+		options.optionState( 'Small', false );
+
 		gui.add( params, 'boolean' );
 		gui.add( params, 'string' );
 		gui.add( params, 'number' );
