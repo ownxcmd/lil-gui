@@ -53,6 +53,17 @@ export default class OptionController extends Controller {
 
 	}
 
+	optionState( name, state ) {
+		const index = this._names.indexOf(name);
+		const option = this.$select.options[index];
+
+		if ( state ) {
+			option.removeAttribute( 'disabled' );
+		} else {
+			option.setAttribute( 'disabled', '' );
+		}
+	}
+
 	updateDisplay() {
 		const value = this.getValue();
 		const index = this._values.indexOf( value );
