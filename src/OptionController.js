@@ -54,7 +54,7 @@ export default class OptionController extends Controller {
 	}
 
 	optionState( name, state ) {
-		const index = this._names.indexOf(name);
+		const index = this._names.indexOf( name );
 		const option = this.$select.options[index];
 
 		if ( state ) {
